@@ -1,0 +1,72 @@
+\documentclass{./sty/imtreport}
+
+\makeglossaries
+\input{Bibliocosas/glossary.tex}
+
+
+\begin{document}
+
+%% Quick configuration of the template
+\docTitle{This title start to become a litle bit long but it should fit the space that is given}
+\subtitle{Période du 12 avril 2019 au 29 septembre 2019}
+\authorJobtitle{Apprenti ingénieur IMT Atlantique Brest (Télécom Bretagne)}
+\promotion{2017}{2020}
+\studyYear{FIP 2A}
+\author{Guillaume Villena}
+\date{\today}
+\version{1.0}
+\confidentiality{OPEN}
+\otherEntityImage{\includegraphics[width=5cm]{src/style/img/tas_logo.pdf}}
+\reportType{Rapport de fin de période}
+
+
+\bottomCoverPage{
+\noindent\textbf{Thales Alenia Space}\\
+5, allée des Gabians, 06400 Cannes\\
+04.92.92.70.00\\
+\\
+\\
+\textbf{Maitre d’apprentissage} : Grégory PHILIPS\\
+Responsable environnement d’ingénierie\\
+gregory.philips@thalesaleniaspace.com\\
+\\
+\\
+\\
+\textbf{Auteur} : \theauthor\\
+\theAuthorJobtitle\\
+me@guillaumevillena.fr\\
+07.82.26.79.75
+\\
+\\
+\textbf{Tuteur enseignant} : Michel JEZEQUEL\\
+Enseignant chercheur responsable du département Electronique\\
+michel.jezequel@imt-atlantique.fr \\
+}
+
+\documentCopies{
+    Grégory PHILIPS : 1\\
+    IMT Atlantique : 1\\
+    Guillaume VILLENA : 1\\
+}
+
+
+%The document !
+\coverPage
+\pageGarde
+
+\setcounter{page}{1}
+
+\subfile{src/content/body/thanks.tex}
+\subfile{src/content/body/summary.tex}
+
+\newpage
+\mbox{}
+\tableofcontents*{}
+
+
+\subfile{src/content/main_content.tex}
+
+\printIndex
+
+\end{document}
+
