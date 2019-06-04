@@ -96,7 +96,7 @@
 %Design of the confidentiality block 
 \newcommand{\TASVisibility}{
     \begin{tikzpicture}
-    \draw (0,0) rectangle (5,0.8) node[pos=.5] {\currentConfidentiality};
+    \draw (0,0) rectangle (5,0.8) node[pos=.5] {\currentConfidentiality}
     \end{tikzpicture}
 }
 
@@ -153,10 +153,16 @@
     }
 }
 
+\newcommand{\makeUVLogo}[5]{
+    \begin{tikzpicture}
+    \fill[#1] (0,0) rectangle (#4,#5) node[pos=.5] {\centering \color{white} {\LARGE #2}    {\small #3}   }; 
+    \end{tikzpicture}
+}
+
 \newcommand{\resetHead}{
     \fancyhead{}
-    \fancyhead[L]{\includegraphics[width=4cm]{src/style/img/imta_logo.pdf}}
-    \fancyhead[R]{\raisebox{3mm}{\includegraphics[width=4cm]{src/style/img/tas_logo.pdf}}}
+    \fancyhead[L]{\includegraphics[width=4cm]{sty/img/imta_logo.pdf}}
+    \fancyhead[R]{\raisebox{3mm}{\theHeaderEntityImage}}
     \fancyhead[C]{
     \raisebox{5mm}{\parbox[b]{9cm}{
     \centering
@@ -180,6 +186,10 @@
 
 \newcommand{\otherEntityImage}[1]{
     \gdef\theOtherEntityImage{#1}%
+}
+
+\newcommand{\headerEntityImage}[1]{
+    \gdef\theHeaderEntityImage{#1}%
 }
 
 \newcommand{\bottomCoverPage}[1]{
@@ -222,6 +232,7 @@
 \bottomCoverPage{}
 \documentCopies{}
 \reportType{Rapport}
+\headerEntityImage{}
 \volumes{1}{1}
 
 %Print the main page
@@ -234,7 +245,7 @@
 \noHeadFoot
 
 \AddToShipoutPicture*{\unitlength=1cm
-\put(8,17.3){\includegraphics[width=11cm]{src/style/img/imta_triangles.pdf}}}
+\put(8,17.3){\includegraphics[width=11cm]{sty/img/imta_triangles.pdf}}}
 
 \begin{textblock*}{13cm}(2cm,9cm) % {block width} (coords) 
    \noindent{\Huge \theDocTitle}
