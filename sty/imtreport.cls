@@ -199,6 +199,13 @@
     \gdef\theVolumes{Volume #1/#2}
 }
 
+\newcommand{\email}[1]{
+    \href{mailto:#1}{#1}
+}
+\newcommand{\tel}[1]{
+    \href{tel:#1}{#1}
+}
+
 
 %++++++++++++++++++++++++++++++++++
 % Usage of declared stuff !
@@ -241,8 +248,8 @@
     Filière par apprentissage (FIP)\\
     655 Avenue du Technopôle\\
     29280 Plouzané\\
-    \textbf{Téléphone} : +33 2 29 00 11 11\\
-    \textbf{URL} : www.imt–atlantique.fr\\
+    \textbf{Téléphone} : \tel{+33 2 29 00 11 11}\\
+    \textbf{URL} : \url{www.imt-atlantique.fr}\\
 \end{textblock*}
 
 \begin{textblock*}{21cm}(0cm,14cm) % {block width} (coords) 
